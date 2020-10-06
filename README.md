@@ -1,2 +1,2 @@
 # C
-Notes I took while learning C
+Notes I took while reading "Modern C" by Jens Gustedt
