@@ -45,10 +45,10 @@ void mergeSort(size_t* array, size_t low, size_t high, size_t totalSize) { //tot
 			//inserting i^th element of second block at insertIndex
 			size_t temp = *(array + elemIndex);
 			size_t k;
-			for (k = elemIndex - 1; (k >= insertIndex) && (k <= elemIndex - 1); k--)  { //we offset the whole portion [insert index, index of element to move - 1] by +1
-															  //WARNING: if insertIndex = 0, since k is a size_t, we're screwed since k-1 = infinite when k = 0.
-															  //If we declare k as an int it apparently doesn't work neither
-															  //So that's why we verify that (k <= elemIndex - 1) in the stop condition of the for loop
+			for (k = elemIndex - 1; (k >= insertIndex) && (k <= elemIndex - 1); k--)  { //offsetting the whole portion [insert index, index of element to move - 1] by +1
+			//WARNING: if insertIndex = 0, since k is a size_t, we're screwed since k-1 = infinite when k = 0.
+			//If we declare k as an int it apparently doesn't work neither
+			//So that's why we verify that (k <= elemIndex - 1) in the stop condition of the for loop
 				*(array + k + 1) = *(array + k);
 			}
 			*(array + insertIndex) = temp; //we insert our element
